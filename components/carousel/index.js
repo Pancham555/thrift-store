@@ -73,18 +73,22 @@ const Slider = ({
       breakpoints={{ 768: { slidesPerView } }}
       spaceBetween={50}
       slidesPerView={1}
+      centeredSlides={true}
+      centeredSlidesBounds={true}
+      wrapperClass="-bottom-6"
       autoplay={true}
       className={`w-full ${
-        height === "slider" ? "h-[28rem] rounded-none" : "h-auto rounded-md"
-      } overflow-hidden bg-white`}
+        height === "slider" ? "h-[24rem] rounded-none" : "h-auto rounded-md"
+      } overflow-hidden`}
     >
       {array.map((data, index) => {
         return (
           <SwiperSlide
             key={index}
-            className={`h-full w-full justify-center cursor-grab active:cursor-grabbing`}
+            className={`h-full w-full lg:px-0 px-11 justify-center flex-col cursor-grab active:cursor-grabbing`}
           >
-            {height === "slider" ? (
+            <CardItem />
+            {/* {height === "slider" ? (
               <Image
                 src={data}
                 alt="slider images"
@@ -96,7 +100,7 @@ const Slider = ({
               />
             ) : (
               <CardItem />
-            )}
+            )} */}
           </SwiperSlide>
         );
       })}

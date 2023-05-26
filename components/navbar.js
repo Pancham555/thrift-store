@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="bg-black shadow-sm shadow-gray-500 sticky top-0 z-50">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-1 pb-4 md:py-4">
           <div className="flex items-center justify-between md:justify-start">
             <button
@@ -30,7 +31,13 @@ const Navbar = () => {
             </button>
 
             <Link href="/" className="font-bold text-gray-700 text-2xl">
-              DripVault.store
+              {/* DripVault.store */}
+              <Image
+                src="/logo.svg"
+                width={500}
+                height={300}
+                className="w-full h-12"
+              />
             </Link>
 
             <div className="hidden md:flex space-x-3 flex-1 lg:ml-8">
@@ -70,7 +77,7 @@ const Navbar = () => {
               <div className="relative hidden lg:block">
                 <input
                   type="search"
-                  className="pl-10  pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+                  className="pl-10 bg-gray-900 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
                   placeholder="Search"
                 />
                 <svg
@@ -112,9 +119,9 @@ const Navbar = () => {
 
               <button
                 type="button"
-                className=" md:block w-10 h-10 rounded-lg bg-gray-100 border border-gray-200 flex justify-center items-center"
+                className=" md:block w-10 h-10 rounded-lg bg-gray-900 border border-gray-200 flex justify-center items-center"
               >
-                <img
+                <Image
                   src="https://avatars.dicebear.com/api/bottts/2.svg"
                   alt="bottts"
                   width="28"
@@ -128,7 +135,7 @@ const Navbar = () => {
           <div className="relative lg:hidden">
             <input
               type="search"
-              className="mt-1 w-full pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+              className="mt-1 w-full pl-10 pr-2 bg-gray-900 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
               placeholder="Search"
             />
 

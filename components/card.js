@@ -12,7 +12,7 @@ export default function CardItem({
   return (
     <div
       onClick={() => router.push("/products/2")}
-      className="shadow-gray-400 mb-5 cursor-pointer transform overflow-hidden rounded-lg bg-white  shadow-md duration-300"
+      className="shadow-gray-700 my-5 w-full cursor-pointer transform overflow-hidden rounded-lg bg-gray-900  shadow-md duration-300"
     >
       {/* hover:shadow-lg */}
       {/* dark:bg-slate-800 */}
@@ -20,19 +20,19 @@ export default function CardItem({
       <Image
         width={360}
         height={360}
-        className="h-60 w-full object-cover object-center"
+        className="lg:h-60 h-56 w-full object-cover object-center"
         src={image}
         alt="Product Image"
       />
-      <div className="p-4">
-        <h2 className="mb-2 text-lg font-medium text-gray-900">
+      <div className="p-4 text-gray-300">
+        <h2 className="mb-2 text-lg font-medium">
           {/* dark:text-white */}
           {title}
         </h2>
         {/* dark:text-gray-300 */}
         {/* <p className="mb-2 text-base text-gray-700">{desc}</p> */}
         <div className="flex items-center">
-          <p className="mr-2 text-lg font-semibold text-gray-900">
+          <p className="mr-2 text-lg font-semibold">
             {/* dark:text-white */}
             {currentprice}
           </p>

@@ -10,7 +10,7 @@ const Product = () => {
     }
   }, [quantity]);
   return (
-    <div>
+    <div className="bg-black">
       <Navbar />
       <div className="py-6">
         {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,10 +78,10 @@ const Product = () => {
               </div>
             </div>
             <div className="md:flex-1 px-4 my-auto">
-              <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
+              <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-300 text-2xl md:text-3xl">
                 Lorem ipsum dolor, sit amet consectetur, adipisicing elit.
               </h2>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-300 text-sm">
                 By{" "}
                 <a href="#" className="text-indigo-600 hover:underline">
                   ABC Company
@@ -107,7 +107,7 @@ const Product = () => {
                 </div>
               </div>
 
-              <p className="text-gray-500">
+              <p className="text-gray-300">
                 Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Vitae
                 exercitationem porro saepe ea harum corrupti vero id laudantium
                 enim, libero blanditiis expedita cupiditate a est.
