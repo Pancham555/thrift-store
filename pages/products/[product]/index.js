@@ -1,8 +1,7 @@
 import Navbar from "@components/components/navbar";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const Product = () => {
+const ProductItem = () => {
   const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     if (quantity < 1) {
@@ -163,4 +162,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductItem;
