@@ -10,10 +10,10 @@ import Image from "next/image";
 import CardItem from "../card";
 const Slider = ({
   array = [
-    "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=99",
-    "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=884&q=99",
-    "https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=99",
-    "https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=99",
+    "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=99",
+    "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=99",
+    "https://images.unsplash.com/photo-1619119069152-a2b331eb392a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=99",
+    "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=99",
   ],
   height = "slider",
   slidesPerView = 1,
@@ -24,7 +24,7 @@ const Slider = ({
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
-      autoplay={height === "slider" ? { delay: 5000 } : false}
+      autoplay={height === "slider" ? { delay: 4000 } : false}
       loop
       centerInsufficientSlides
       breakpoints={{
@@ -33,10 +33,16 @@ const Slider = ({
       pagination={{ clickable: true }}
       onSwiper={setSwiper}
       className={`relative
-      ${height === "slider" ? "h-[calc(100vh-12rem)]" : "h-[29rem]"}
+      ${
+        height === "slider" ? "h-[21rem] lg:h-[calc(100vh-12rem)]" : "h-[29rem]"
+      }
        w-full cursor-grab active:cursor-grabbing`}
     >
-      <div className="px-2 sm:px-6 lg:px-8 w-full absolute inset-0 items-center flex justify-between">
+      <div
+        className={`${
+          height === "slider" ? "hidden" : "block"
+        } px-2 sm:px-6 lg:px-8 w-full absolute inset-0 items-center flex justify-between`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"

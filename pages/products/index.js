@@ -19,8 +19,10 @@ export default function Product() {
       </Sidebar>
       <Navbar />
       <div className="flex pt-8 lg:flex-nowrap flex-wrap">
-        <div className="lg:w-[25%] overflow-hidden w-0 sticky top-0 z-[60] text-gray-300">
-          <FilterList />
+        <div className="lg:w-[25%]  overflow-hidden w-0 sticky top-0 z-[60] text-gray-300">
+          <div className="pl-4 sm:pl-6 lg:pl-8">
+            <FilterList />
+          </div>
         </div>
         <div className="lg:w-[75%] w-full overflow-hidden px-4 sm:px-6 lg:px-8 ">
           {/* px-4 sm:px-6 lg:px-8 */}

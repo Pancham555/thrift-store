@@ -4,9 +4,9 @@ import PriceFilter from "./priceFilter";
 const FilterList = () => {
   const [priceValue, setPriceValue] = useState();
   return (
-    <div>
-      <div className="text-2xl px-4 sm:px-6 lg:px-8 pb-2">Filters</div>
-      <div className="h-full sticky left-0 z-[80] px-4 sm:px-6 lg:px-8">
+    <div className="text-gray-300 ">
+      <div className="text-2xl">Filters</div>
+      <div className="h-full sticky left-0 z-[80] ">
         <div className="mt-4">
           <label
             for="category"
