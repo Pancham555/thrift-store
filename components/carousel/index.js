@@ -24,6 +24,7 @@ const Slider = ({
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
+      autoplay={{ delay: 5000 }}
       loop
       breakpoints={{
         768: { slidesPerView: slidesPerView },
