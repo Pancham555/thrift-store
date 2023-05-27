@@ -24,7 +24,11 @@ const Slider = ({
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
-      autoplay={height === "slider" ? { delay: 4000 } : false}
+      autoplay={
+        height === "slider"
+          ? { delay: 4000, disableOnInteraction: false }
+          : false
+      }
       loop
       centerInsufficientSlides
       breakpoints={{
