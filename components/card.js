@@ -62,7 +62,7 @@ const Card = ({
   discount = "20%",
 }) => {
   return (
-    <div className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-gray-600 bg-gray-800 shadow-gray-700 shadow-md">
+    <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border-gray-600 bg-gray-800 shadow-gray-700 shadow-md">
       <Link
         className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
         href="/products/2"

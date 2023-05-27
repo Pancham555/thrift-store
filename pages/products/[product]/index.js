@@ -1,8 +1,11 @@
 import Navbar from "@components/components/navbar";
+import Sidebar from "@components/components/sidebar";
+import { useSidebar } from "@components/components/sidebarContext";
 import React, { useEffect, useState } from "react";
 
 const ProductItem = () => {
   const [quantity, setQuantity] = useState(1);
+  const [open, setOpen] = useSidebar();
   useEffect(() => {
     if (quantity < 1) {
       setQuantity(1);
@@ -10,6 +13,7 @@ const ProductItem = () => {
   }, [quantity]);
   return (
     <div className="bg-black">
+      <Sidebar open={open} setOpen={setOpen} />
       <Navbar />
       <div className="py-6">
         {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

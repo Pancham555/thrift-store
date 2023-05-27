@@ -22,18 +22,19 @@ const Slider = ({
   return (
     <Swiper
       modules={[Navigation, Pagination, A11y, Autoplay]}
-      spaceBetween={50}
+      spaceBetween={10}
       slidesPerView={1}
-      autoplay={{ delay: 5000 }}
+      autoplay={height === "slider" ? { delay: 5000 } : false}
       loop
+      centerInsufficientSlides
       breakpoints={{
         768: { slidesPerView: slidesPerView },
       }}
       pagination={{ clickable: true }}
       onSwiper={setSwiper}
-      className={`relative ${
-        height === "slider" ? "h-[26rem]" : "h-[32rem]"
-      } w-full`}
+      className={`relative
+      ${height === "slider" ? "h-[calc(100vh-12rem)]" : "h-[29rem]"}
+       w-full cursor-grab active:cursor-grabbing`}
     >
       <div className="px-2 sm:px-6 lg:px-8 w-full absolute inset-0 items-center flex justify-between">
         <svg
@@ -63,7 +64,7 @@ const Slider = ({
         return (
           <SwiperSlide
             key={index}
-            className={`h-full w-full justify-center flex-col cursor-grab active:cursor-grabbing`}
+            className={`items-center h-full w-full justify-center flex-col cursor-grab active:cursor-grabbing`}
           >
             {height === "slider" ? (
               <Image
@@ -76,7 +77,9 @@ const Slider = ({
                 } bg-slate-700`}
               />
             ) : (
-              <CardItem />
+              <div className="w-full flex justify-center">
+                <CardItem />
+              </div>
             )}
           </SwiperSlide>
         );
