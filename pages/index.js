@@ -13,31 +13,7 @@ export default function Home() {
           </div>
         </div>
         <div className="pb-8 px-1 sm:px-6 lg:px-8 w-full">
-          <CarouselComponent slidesPerView={3.5} height="slider" />
-        </div>
-      </>
-      <>
-        <div className="pt-8 px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-3xl font-semibold text-white">Rings</div>
-        </div>
-        <div className="pb-8 px-1 sm:px-6 lg:px-8 w-full">
-          <CarouselComponent slidesPerView={3.5} height="slider" />
-        </div>
-      </>
-      <>
-        <div className="pt-8 px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-3xl font-semibold text-white">Chains</div>
-        </div>
-        <div className="pb-8 px-1 sm:px-6 lg:px-8 w-full">
-          <CarouselComponent slidesPerView={3.5} height="slider" />
-        </div>
-      </>
-      <>
-        <div className="pt-8 px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-3xl font-semibold text-white">Bracelets</div>
-        </div>
-        <div className="pb-8 px-1 sm:px-6 lg:px-8 w-full">
-          <CarouselComponent slidesPerView={3.5} height="slider" />
+          <CarouselComponent slidesPerView={3.5} height="card" />
         </div>
       </>
     </main>

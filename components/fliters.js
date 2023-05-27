@@ -55,7 +55,7 @@ function FilterDropdown({ children }) {
       </div>
 
       {showFilters && (
-        <div className="origin-top-right absolute left-0 mt-2 w-auto p-5 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute right-0 mt-2 w-auto p-5 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <div
             className="py-1 flex gap-5 flex-wrap"
             role="menu"

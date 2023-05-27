@@ -36,3 +36,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(34 197 94) !important;
+}

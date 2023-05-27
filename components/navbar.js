@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="bg-black shadow-sm shadow-gray-500 sticky top-0 z-50">
+      <div className="bg-black shadow-sm shadow-gray-500 sticky w-full top-0 z-50">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-1 pb-4 md:py-4">
           <div className="flex items-center justify-between md:justify-start">
             <button
@@ -64,7 +64,7 @@ const Navbar = () => {
               <div className="relative hidden lg:block">
                 <input
                   type="search"
-                  className="pl-10 bg-gray-900 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+                  className="pl-10 text-white bg-gray-900 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
                   placeholder="Search"
                 />
                 <svg
@@ -104,7 +104,7 @@ const Navbar = () => {
                 <span className="pl-1 text-gray-500 text-md">5</span>
               </Link>
 
-              <button
+              {/* <button
                 type="button"
                 className=" md:block w-10 h-10 rounded-lg bg-gray-900 border border-gray-200 flex justify-center items-center"
               >
@@ -115,14 +115,14 @@ const Navbar = () => {
                   height="28"
                   className="rounded-lg mx-auto"
                 />
-              </button>
+              </button> */}
             </div>
           </div>
 
           <div className="relative lg:hidden">
             <input
               type="search"
-              className="mt-1 w-full pl-10 pr-2 bg-gray-900 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+              className="mt-1 w-full pl-10 pr-2 text-white bg-gray-900 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
               placeholder="Search"
             />
 
