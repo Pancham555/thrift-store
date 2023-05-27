@@ -8,6 +8,9 @@ const More = () => {
     <main className="bg-black">
       <Sidebar open={open} setOpen={setOpen} />
       <Navbar />
+      <div className="text-gray-300 flex justify-center items-center min-h-screen max-h-full">
+        <div className="text-3xl">Coming Soon!</div>
+      </div>
     </main>
   );
 };
