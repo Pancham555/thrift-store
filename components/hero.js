@@ -1,7 +1,22 @@
-import CarouselComponent from "./carousel";
-import React from "react";
+import axios from "axios";
+import CarouselComponent from "./carousel/imageCarousel";
+import React, { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [carouselData, setCarouselData] = useState([]);
+  const getCarouselData = async () => {
+    try {
+      const baseurl = process.env.STRAPI_URL;
+      const url = baseurl + `/api/carousel?populate=*`;
+      const data = await axios.get(url);
+      setCarouselData(data.data?.data?.attributes?.image?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getCarouselData();
+  }, []);
   return (
     <div className="w-full shadow-sm shadow-slate-500 bg-black">
       {/* <Image
@@ -11,7 +26,7 @@ const Hero = () => {
         quality={100}
         className="w-full h-full object-contain"
       /> */}
-      <CarouselComponent slidesPerView={1} height="slider" />
+      <CarouselComponent array={carouselData} />
     </div>
   );
 };

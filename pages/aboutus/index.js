@@ -1,13 +1,11 @@
-import Navbar from "@components/components/navbar";
 import Sidebar from "@components/components/sidebar";
 import { useSidebar } from "@components/components/sidebarContext";
 
 const Aboutus = () => {
   const [open, setOpen] = useSidebar();
   return (
-    <main className="bg-black min-h-screen max-h-full">
+    <main className="bg-gray-800 min-h-screen max-h-full">
       <Sidebar open={open} setOpen={setOpen} />
-      <Navbar />
       <div className="container mx-auto py-16 px-4 text-gray-300">
         <h1 className="text-3xl font-bold mb-8">About Us</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

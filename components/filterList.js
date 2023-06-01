@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import PriceFilter from "./priceFilter";
 
-const FilterList = () => {
-  const [priceValue, setPriceValue] = useState();
+const FilterList = ({
+  category,
+  setCategory,
+  price,
+  setPrice,
+  min = 0,
+  max = 1000,
+}) => {
+  // const [priceValue, setPriceValue] = useState();
   return (
     <div className="text-gray-300 ">
       <div className="text-2xl">Filters</div>
@@ -14,25 +21,44 @@ const FilterList = () => {
           >
             Select a Category
           </label>
-          <select
-            id="category"
-            className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option selected>Choose Item Type</option>
-            <option value="Rings">Rings</option>
-            <option value="Bracelets">Bracelets</option>
-            <option value="Sunglasses">Sunglasses</option>
-            <option value="Masks">Masks</option>
-          </select>
+          <div className="relative w-full">
+            <select
+              onChange={(e) => setCategory(e.target.value)}
+              id="category"
+              className="appearance-none w-full border text-gray-300 bg-gray-900 border-gray-300 rounded-md py-2 pl-3 pr-10 sm:pr-16 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option selected value="">
+                Choose Item Type
+              </option>
+              <option value="rings">Rings</option>
+              <option value="bracelets">Bracelets</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-300">
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
         <div className="flex justify-center mt-4">
           <PriceFilter
             title="Price"
-            min={100}
-            max={2000}
+            min={min}
+            max={max}
             step={10}
-            value={priceValue}
-            setValue={setPriceValue}
+            value={price}
+            setValue={setPrice}
           />
         </div>
       </div>

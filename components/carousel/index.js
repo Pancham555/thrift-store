@@ -6,17 +6,72 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
 import CardItem from "../card";
 const Slider = ({
   array = [
-    "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=99",
-    "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=99",
-    "https://images.unsplash.com/photo-1619119069152-a2b331eb392a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=99",
-    "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=99",
+    {
+      id: 1,
+      attributes: {
+        title: "Owl ring",
+        desc: "This is an owl ring",
+        currentprice: 250,
+        originalprice: 250,
+        discount: "12%",
+        createdAt: "2023-05-28T10:27:55.523Z",
+        updatedAt: "2023-05-28T10:28:02.179Z",
+        publishedAt: "2023-05-28T10:28:02.174Z",
+        type: "rings",
+        image: {
+          data: [
+            {
+              id: 2,
+              attributes: {
+                name: "349257175_614417924075301_7619742449270862667_n.jpg",
+                alternativeText: null,
+                caption: null,
+                width: 640,
+                height: 632,
+                formats: {
+                  thumbnail: {
+                    name: "thumbnail_349257175_614417924075301_7619742449270862667_n.jpg",
+                    hash: "thumbnail_349257175_614417924075301_7619742449270862667_n_9904e55c84",
+                    ext: ".jpg",
+                    mime: "image/jpeg",
+                    path: null,
+                    width: 158,
+                    height: 156,
+                    size: 6,
+                    url: "http://localhost:1337/uploads/thumbnail_349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+                  },
+                  small: {
+                    name: "small_349257175_614417924075301_7619742449270862667_n.jpg",
+                    hash: "small_349257175_614417924075301_7619742449270862667_n_9904e55c84",
+                    ext: ".jpg",
+                    mime: "image/jpeg",
+                    path: null,
+                    width: 500,
+                    height: 494,
+                    size: 32.82,
+                    url: "http://localhost:1337/uploads/small_349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+                  },
+                },
+                hash: "349257175_614417924075301_7619742449270862667_n_9904e55c84",
+                ext: ".jpg",
+                mime: "image/jpeg",
+                size: 45.63,
+                url: "http://localhost:1337/uploads/349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+                previewUrl: null,
+                provider: "local",
+                provider_metadata: null,
+                createdAt: "2023-05-28T10:23:35.598Z",
+                updatedAt: "2023-05-28T10:23:35.598Z",
+              },
+            },
+          ],
+        },
+      },
+    },
   ],
-  height = "slider",
-  slidesPerView = 1,
 }) => {
   const [swiper, setSwiper] = useState();
   return (
@@ -24,28 +79,16 @@ const Slider = ({
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
-      autoplay={
-        height === "slider"
-          ? { delay: 4000, disableOnInteraction: false }
-          : false
-      }
-      loop
       centerInsufficientSlides
       breakpoints={{
-        768: { slidesPerView: slidesPerView },
+        768: { slidesPerView: 3.5 },
       }}
       pagination={{ clickable: true }}
       onSwiper={setSwiper}
-      className={`relative
-      ${
-        height === "slider" ? "h-[21rem] lg:h-[calc(100vh-12rem)]" : "h-[29rem]"
-      }
-       w-full cursor-grab active:cursor-grabbing`}
+      className={`relative h-[31rem] w-full cursor-grab active:cursor-grabbing`}
     >
       <div
-        className={`${
-          height === "slider" ? "hidden" : "block"
-        } px-2 sm:px-6 lg:px-8 w-full absolute inset-0 items-center flex justify-between`}
+        className={`w-full absolute inset-0 items-center flex justify-between`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +96,7 @@ const Slider = ({
           width="100%"
           height="100%"
           fill="currentColor"
-          className=" w-10 h-10 z-40 text-green-500 cursor-pointer bg-white rounded-full"
+          className="md:w-10 w-8 md:h-10 h-8 z-40 text-green-500 cursor-pointer bg-white rounded-full"
           onClick={() => swiper.slidePrev()}
         >
           <path d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zm1.289-15.7 1.422 1.4-4.3 4.344 4.289 4.245-1.4 1.422-5.714-5.648z" />
@@ -64,33 +107,23 @@ const Slider = ({
           width="100%"
           height="100%"
           fill="currentColor"
-          className=" w-10 h-10 z-40 text-green-500 cursor-pointer bg-white rounded-full"
+          className="md:w-10 w-8 md:h-10 h-8 z-40 text-green-500 cursor-pointer bg-white rounded-full"
           onClick={() => swiper.slideNext()}
         >
           <path d="M10 20A10 10 0 1 0 0 10a10 10 0 0 0 10 10zM8.711 4.3l5.7 5.766L8.7 15.711l-1.4-1.422 4.289-4.242-4.3-4.347z" />
         </svg>
       </div>
-      {array.map((data, index) => {
+      {array?.map((data, index) => {
         return (
           <SwiperSlide
             key={index}
-            className={`items-center h-full w-full justify-center flex-col cursor-grab active:cursor-grabbing`}
+            className={`
+             flex h-full w-full justify-center cursor-grab
+             active:cursor-grabbing`}
           >
-            {height === "slider" ? (
-              <Image
-                src={data}
-                alt="slider images"
-                width={height === "slider" ? 2000 : 350}
-                height={height === "slider" ? 1500 : 350}
-                className={`object-cover w-full h-full ${
-                  height === "slider" ? "" : "rounded-md"
-                } bg-slate-700`}
-              />
-            ) : (
-              <div className="w-full flex justify-center">
-                <CardItem />
-              </div>
-            )}
+            <div className="w-full max-w-xs mx-auto flex justify-center">
+              <CardItem {...data} />
+            </div>
           </SwiperSlide>
         );
       })}
