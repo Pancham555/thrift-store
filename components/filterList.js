@@ -14,7 +14,7 @@ const FilterList = ({
     <div className="text-gray-300 ">
       <div className="text-2xl">Filters</div>
       <div className="h-full sticky left-0 z-[80] ">
-        <div className="mt-4">
+        <div className="my-4">
           <label
             for="category"
             className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"

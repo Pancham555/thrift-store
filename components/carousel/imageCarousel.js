@@ -95,8 +95,6 @@ const ImageCarousel = ({
               alt="slider images"
               width={2000}
               height={1500}
-              placeholder="blur"
-              blurDataURL={imageUrl}
               className={`object-cover w-full h-full bg-slate-700`}
             />
           </SwiperSlide>

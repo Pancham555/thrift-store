@@ -1,0 +1,61 @@
+const id = 1;
+const attributes = {
+  title: "Owl ring",
+  desc: "This is an owl ring",
+  currentprice: 250,
+  originalprice: 250,
+  discount: "12%",
+  createdAt: "2023-05-28T10:27:55.523Z",
+  updatedAt: "2023-05-28T10:28:02.179Z",
+  publishedAt: "2023-05-28T10:28:02.174Z",
+  type: "rings",
+  image: {
+    data: [
+      {
+        id: 2,
+        attributes: {
+          name: "349257175_614417924075301_7619742449270862667_n.jpg",
+          alternativeText: null,
+          caption: null,
+          width: 640,
+          height: 632,
+          formats: {
+            thumbnail: {
+              name: "thumbnail_349257175_614417924075301_7619742449270862667_n.jpg",
+              hash: "thumbnail_349257175_614417924075301_7619742449270862667_n_9904e55c84",
+              ext: ".jpg",
+              mime: "image/jpeg",
+              path: null,
+              width: 158,
+              height: 156,
+              size: 6,
+              url: "/uploads/thumbnail_349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+            },
+            small: {
+              name: "small_349257175_614417924075301_7619742449270862667_n.jpg",
+              hash: "small_349257175_614417924075301_7619742449270862667_n_9904e55c84",
+              ext: ".jpg",
+              mime: "image/jpeg",
+              path: null,
+              width: 500,
+              height: 494,
+              size: 32.82,
+              url: "/uploads/small_349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+            },
+          },
+          hash: "349257175_614417924075301_7619742449270862667_n_9904e55c84",
+          ext: ".jpg",
+          mime: "image/jpeg",
+          size: 45.63,
+          url: "/uploads/349257175_614417924075301_7619742449270862667_n_9904e55c84.jpg",
+          previewUrl: null,
+          provider: "local",
+          provider_metadata: null,
+          createdAt: "2023-05-28T10:23:35.598Z",
+          updatedAt: "2023-05-28T10:23:35.598Z",
+        },
+      },
+    ],
+  },
+};
+export { id, attributes };

@@ -1,0 +1,88 @@
+{
+  "id": 0,
+  "attributes": {
+    "title": "",
+    "desc": "",
+    "createdAt": "",
+    "updatedAt": "",
+    "publishedAt": "",
+    "type": "",
+    "currentprice": 0,
+    "originalprice": 0,
+    "image": {
+      "data": [
+        {
+          "id": 0,
+          "attributes": {
+            "name": "",
+            "alternativeText": null,
+            "caption": null,
+            "width": 870,
+            "height": 580,
+            "formats": {
+              "small": {
+                "name": "",
+                "hash": "",
+                "ext": "",
+                "mime": "",
+                "path": null,
+                "width": 0,
+                "height": 0,
+                "size": 0,
+                "url": "",
+                "provider_metadata": {
+                  "public_id": "",
+                  "resource_type": ""
+                }
+              },
+              "medium": {
+                "name": "",
+                "hash": "",
+                "ext": "",
+                "mime": "",
+                "path": null,
+                "width": 0,
+                "height": 0,
+                "size": 0,
+                "url": "",
+                "provider_metadata": {
+                  "public_id": "",
+                  "resource_type": ""
+                }
+              },
+              "thumbnail": {
+                "name": "",
+                "hash": "",
+                "ext": "",
+                "mime": "",
+                "path": null,
+                "width": 0,
+                "height": 0,
+                "size": 0,
+                "url": "",
+                "provider_metadata": {
+                  "public_id": "",
+                  "resource_type": ""
+                }
+              }
+            },
+            "hash": "",
+            "ext": "",
+            "mime": "",
+            "size": 0,
+            "url": "",
+            "previewUrl": null,
+            "provider": "",
+            "provider_metadata": {
+              "public_id": "",
+              "resource_type": ""
+            },
+            "createdAt": "",
+            "updatedAt": ""
+          }
+        }
+      ]
+    }
+  },
+  "quantity": 1
+}

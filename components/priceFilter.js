@@ -21,16 +21,16 @@ const PriceFilter = ({
         max={max}
         value={value}
         onChange={handleChange}
-        className=" accent-blue-700 active:accent-blue-700
+        className="accent-green-700 active:accent-green-700
          w-full h-3.5 rounded-full appearance-none
-          bg-blue-200"
+          bg-green-200"
       />
       <style jsx>{`
         input[type="range"]::-webkit-slider-thumb {
           appearance: none;
           width: 20px;
           height: 20px;
-          background-color: #1d4ed8;
+          background-color: #15803d;
           border-radius: 50%;
           cursor: pointer;
         }
@@ -41,7 +41,7 @@ const PriceFilter = ({
           line-height: 1.25rem;
           color: #374151;
           text-align: center;
-          background-color: #f3f4f6;
+          background-color: #f3f6f4;
           border-radius: 0.375rem;
           margin: 0 auto;
         }
