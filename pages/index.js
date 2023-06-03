@@ -5,10 +5,11 @@ import CarouselComponent from "@components/components/carousel";
 import Sidebar from "@components/components/sidebar";
 import { useSidebar } from "@components/components/sidebarContext";
 import Spinner from "@components/components/spinner";
-import home from "../components/json_types/home.js";
+// import home from "../components/json_types/home.js";
+import NoResults from "@components/components/noResults.js";
 export default function Home() {
   const [open, setOpen] = useSidebar();
-  const [trending, setTrending] = useState([home]);
+  const [trending, setTrending] = useState([]);
   const [loading, setLoading] = useState(false);
   const getTrendingData = async () => {
     setLoading(true);
@@ -37,7 +38,11 @@ export default function Home() {
         </div>
         <div className="pb-8 px-2 sm:px-6 lg:px-8 w-full mt-4">
           {loading && <Spinner />}
-          {!loading && <CarouselComponent array={trending} />}
+          {!loading && trending.length !== 0 ? (
+            <CarouselComponent array={trending} />
+          ) : (
+            !loading && <NoResults />
+          )}
         </div>
       </>
     </main>

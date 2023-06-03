@@ -1,5 +1,6 @@
 import CardItem from "@components/components/card";
 import FilterList from "@components/components/filterList";
+import NoResults from "@components/components/noResults";
 import Sidebar from "@components/components/sidebar";
 import { useSidebar } from "@components/components/sidebarContext";
 import SortFilter from "@components/components/sortFilter";
@@ -80,14 +81,15 @@ export default function Product() {
           <div className="my-4">
             {loading && <Spinner />}
             <div className="w-full gap-6 lg:gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 z-30">
-              {!loading &&
-                items.map((data, index) => {
-                  return (
-                    <div key={index} className="w-full flex justify-center">
-                      <CardItem {...data} />
-                    </div>
-                  );
-                })}
+              {!loading && items.length !== 0
+                ? items.map((data, index) => {
+                    return (
+                      <div key={index} className="w-full flex justify-center">
+                        <CardItem {...data} />
+                      </div>
+                    );
+                  })
+                : !loading && <NoResults />}
             </div>
           </div>
         </div>

@@ -139,7 +139,7 @@ const Cart = () => {
               <>
                 <div className="w-full py-8 flex items-center justify-center">
                   <h1 className="text-2xl font-semibold text-gray-900">
-                    No items in your cart :(
+                    No items in your cart 😢
                   </h1>
                 </div>
               </>
