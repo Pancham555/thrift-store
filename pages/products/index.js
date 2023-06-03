@@ -69,7 +69,7 @@ export default function Product() {
               setPrice={setPrice}
               category={category}
               setCategory={setCategory}
-              max={1800}
+              max={500}
               min={0}
             />
           </div>
