@@ -37,7 +37,7 @@ const Card = ({ id = idcard, attributes = attributescard }) => {
           </div>
         </div>
       )} */}
-      <Link href={`/products/${id}`}>
+      <Link href={`/products/${attributes?.slug}`}>
         <div className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
           <Image
             width={500}
@@ -58,7 +58,7 @@ const Card = ({ id = idcard, attributes = attributescard }) => {
         </div>
       </Link>
       <div className="mt-4 px-5 pb-5 text-gray-300">
-        <Link href={`/products/${id}`}>
+        <Link href={`/products/${attributes?.slug}`}>
           <h5 className="tracking-tight w-full overflow-hidden text-xl line-clamp-2 text-ellipsis">
             {attributes.title}
           </h5>

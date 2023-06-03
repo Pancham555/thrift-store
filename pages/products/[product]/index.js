@@ -15,29 +15,29 @@ const ProductItem = () => {
     itemInfo?.attributes?.image?.data?.[0]?.attributes?.formats?.small?.url ??
     itemInfo?.attributes?.image?.data?.[0]?.attributes?.formats?.thumbnail
       ?.url ??
-    itemInfo?.attributes.image[0].formats?.medium?.url ??
-    itemInfo?.attributes.image[0].formats?.thumbnail?.url;
+    itemInfo?.attributes.image?.[0].formats?.medium?.url ??
+    itemInfo?.attributes.image?.[0].formats?.thumbnail?.url;
   const [expandDesc, setExpandDesc] = useState(false);
   const [open, setOpen] = useSidebar();
   const router = useRouter();
-  const id = router.query.product;
+  const slug = router.query.product;
   const dispatch = useDispatch();
   const getItem = useCallback(async () => {
     try {
       const baseurl = process.env.STRAPI_URL;
-      const url = baseurl + `/api/products/${id}?populate=*`;
+      const url = baseurl + `/api/products/${slug}?populate=*`;
       const item = await axios.get(url);
       setItemInfo(item.data.data);
     } catch (error) {
       console.log(error);
     }
-  }, [id]);
-  const isNumber = (str) => {
-    return (
-      /^[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?$/.test(str) ||
-      !isNaN(parseFloat(str))
-    );
-  };
+  }, [slug]);
+  // const isNumber = (str) => {
+  //   return (
+  //     /^[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?$/.test(str) ||
+  //     !isNaN(parseFloat(str))
+  //   );
+  // };
 
   const discountPercentage = Math.round(
     ((itemInfo?.attributes?.originalprice -
@@ -48,10 +48,10 @@ const ProductItem = () => {
 
   useEffect(() => {
     getItem();
-    if (!isNumber(id)) {
-      router.back();
-    }
-  }, [id, getItem, router]);
+    // if (!isNumber(id)) {
+    //   router.back();
+    // }
+  }, [slug, getItem, router]);
   return (
     <div className="bg-black">
       <Sidebar open={open} setOpen={setOpen} />

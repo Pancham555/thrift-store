@@ -45,6 +45,7 @@ const Cart = () => {
   const getItem = cart.map((data) => ({
     id: data.id,
     title: data.attributes.title,
+    slug: data.attributes.slug,
     quantity: data.quantity,
     totalprice: data.attributes.currentprice * data.quantity,
   }));
