@@ -109,7 +109,7 @@ const ProductItem = () => {
                   {itemInfo?.attributes?.desc}
                 </p>
                 <span
-                  className="cursor-pointer"
+                  className="cursor-pointer font-bold"
                   onClick={() => setExpandDesc(!expandDesc)}
                 >
                   Read {expandDesc ? "Less" : "More"}
