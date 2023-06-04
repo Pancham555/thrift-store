@@ -8,7 +8,11 @@ const Hero = () => {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/carousel?populate=*`;
-      const data = await axios.get(url);
+      const data = await axios.get(url, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
       setCarouselData(data.data?.data?.attributes?.image?.data);
     } catch (error) {
       console.log(error);

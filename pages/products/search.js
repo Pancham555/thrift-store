@@ -17,7 +17,11 @@ const Search = () => {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/search?q=${search}`;
-      const data = await axios.get(url);
+      const data = await axios.get(url, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
       setQueryResults(data.data);
     } catch (error) {
       console.log(error);

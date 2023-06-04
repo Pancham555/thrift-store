@@ -26,7 +26,11 @@ export default function Product() {
           sort.length > 2 ? "sort[0]=" + sort + "&" : ""
         }populate=*`;
 
-      const data = await axios.get(url);
+      const data = await axios.get(url, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
 
       const filteredItemByCategory =
         category.length > 2

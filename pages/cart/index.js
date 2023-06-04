@@ -91,7 +91,15 @@ const Cart = () => {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/razorpay`;
-      const sendPaymentInfo = await axios.put(url, { ...paymentInfo });
+      const sendPaymentInfo = await axios.put(
+        url,
+        { ...paymentInfo },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
       if (sendPaymentInfo.status === 200) {
         toast.success("Payment Process completed");
         setUserInfo({

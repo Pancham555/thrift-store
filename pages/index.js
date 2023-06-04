@@ -16,7 +16,11 @@ export default function Home() {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/trending?populate=products,products.image`;
-      const data = await axios.get(url);
+      const data = await axios.get(url, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
       setTrending(data.data?.data?.attributes?.products?.data);
     } catch (error) {
       console.log(error);
