@@ -26,11 +26,7 @@ const ProductItem = () => {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/products/${slug}?populate=*`;
-      const item = await axios.get(url, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
+      const item = await axios.get(url);
       setItemInfo(item.data.data);
     } catch (error) {
       console.log(error);

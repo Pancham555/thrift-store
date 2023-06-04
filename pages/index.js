@@ -7,6 +7,7 @@ import { useSidebar } from "@components/components/sidebarContext";
 import Spinner from "@components/components/spinner";
 // import home from "../components/json_types/home.js";
 import NoResults from "@components/components/noResults.js";
+import Head from "next/head";
 export default function Home() {
   const [open, setOpen] = useSidebar();
   const [trending, setTrending] = useState([]);
@@ -16,11 +17,7 @@ export default function Home() {
     try {
       const baseurl = process.env.STRAPI_URL;
       const url = baseurl + `/api/trending?populate=products,products.image`;
-      const data = await axios.get(url, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
+      const data = await axios.get(url);
       setTrending(data.data?.data?.attributes?.products?.data);
     } catch (error) {
       console.log(error);
@@ -32,6 +29,12 @@ export default function Home() {
   }, []);
   return (
     <main className="bg-gray-800">
+      <Head>
+        <title>
+          Drip Vault: Unveiling the Ultimate Thrift Treasure Trove - Shop
+          Vintage Gems Online
+        </title>
+      </Head>
       <Sidebar open={open} setOpen={setOpen} />
       <Hero />
       <>
