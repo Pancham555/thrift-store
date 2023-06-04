@@ -36,6 +36,7 @@ const Sidebar = ({ open, setOpen, children }) => {
         {links.map((data, index) => {
           return (
             <Link
+              aria-label={data.name}
               key={index}
               href={data.href}
               onClick={() => setOpensidebar(false)}

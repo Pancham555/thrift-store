@@ -20,6 +20,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between md:justify-start">
             <button
               type="button"
+              aria-label="Sidebar Opener"
               onClick={() => setOpen(true)}
               className="md:hidden w-10 h-10 rounded-lg -ml-2 flex justify-center items-center"
             >
@@ -39,7 +40,11 @@ const Navbar = () => {
               </svg>
             </button>
 
-            <Link href="/" className="font-bold text-gray-700 text-2xl">
+            <Link
+              href="/"
+              aria-label="Home"
+              className="font-bold text-gray-700 text-2xl"
+            >
               {/* DripVault.store */}
               <Image
                 src="/logo.svg"
@@ -54,6 +59,7 @@ const Navbar = () => {
               {links.map((data, index) => {
                 return (
                   <Link
+                    aria-label={data.name}
                     href={data.href}
                     key={index}
                     className="px-2 py-2 text-lg hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600"
@@ -98,6 +104,7 @@ const Navbar = () => {
 
               <Link
                 href="/cart"
+                aria-label="Cart"
                 className="relative flex h-10 items-center px-2 rounded-lg border border-gray-200 hover:border-gray-300 focus:outline-none hover:shadow-inner"
               >
                 <svg
