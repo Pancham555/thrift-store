@@ -37,10 +37,10 @@ const Cart = () => {
     userInfo.phone.length >= 8 &&
     userInfo.state.length > 2;
   const cart = useSelector((state) => state.cart);
-  const deliveryPrice = 80;
   const getTotalPrice = cart.reduce((accumulator, item) => {
     return accumulator + item?.attributes?.currentprice * item.quantity;
   }, 0);
+  const deliveryPrice = getTotalPrice > 499 ? 0 : 80;
 
   const getItem = cart.map((data) => ({
     id: data.id,
