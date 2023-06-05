@@ -94,7 +94,7 @@ const ProductItem = () => {
                   itemInfo?.attributes?.image?.data ||
                   itemInfo?.attributes.image
                 ).length > 1 && (
-                  <div className="w-full h-20 flex gap-4 justify-between">
+                  <div className="w-full h-20 flex gap-4 justify-between mb-4">
                     {(
                       itemInfo?.attributes?.image?.data ||
                       itemInfo?.attributes.image
