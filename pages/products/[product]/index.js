@@ -10,6 +10,7 @@ import product from "../../../components/json_types/product.json";
 
 const ProductItem = () => {
   const [itemInfo, setItemInfo] = useState(product);
+  const [imageNo, setImageNo] = useState(0);
   const imageUrl =
     itemInfo?.attributes?.image?.data?.[0]?.attributes?.formats?.medium?.url ??
     itemInfo?.attributes?.image?.data?.[0]?.attributes?.formats?.small?.url ??
@@ -60,15 +61,73 @@ const ProductItem = () => {
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="md:w-[60%] h-full w-full px-4">
               <div className="w-full h-full">
-                <div className="h-64 md:h-96 rounded-lg bg-gray-100 mb-4">
+                <div
+                  className={`h-64 ${
+                    (
+                      itemInfo?.attributes?.image?.data ||
+                      itemInfo?.attributes.image
+                    ).length > 1
+                      ? "md:h-80"
+                      : "md:h-96"
+                  } rounded-md bg-gray-100 mb-4`}
+                >
                   <Image
-                    src={imageUrl}
+                    src={
+                      itemInfo?.attributes?.image?.data?.[imageNo]?.attributes
+                        ?.formats?.medium?.url ??
+                      itemInfo?.attributes?.image?.data?.[imageNo]?.attributes
+                        ?.formats?.small?.url ??
+                      itemInfo?.attributes?.image?.data?.[imageNo]?.attributes
+                        ?.formats?.thumbnail?.url ??
+                      itemInfo?.attributes.image?.[imageNo].formats?.medium
+                        ?.url ??
+                      itemInfo?.attributes.image?.[imageNo].formats?.thumbnail
+                        ?.url
+                    }
                     width={800}
                     height={600}
                     alt="Product"
-                    className="object-cover h-full w-full rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
+                    className="object-cover h-full w-full rounded-md bg-gray-100 mb-4 flex items-center justify-center"
                   />
                 </div>
+                {(
+                  itemInfo?.attributes?.image?.data ||
+                  itemInfo?.attributes.image
+                ).length > 1 && (
+                  <div className="w-full h-20 flex gap-4 justify-between">
+                    {(
+                      itemInfo?.attributes?.image?.data ||
+                      itemInfo?.attributes.image
+                    )?.map((data, index) => {
+                      return (
+                        <div
+                          key={index}
+                          onClick={() => setImageNo(index)}
+                          className="bg-gray-200 w-full h-full rounded-md"
+                        >
+                          <Image
+                            src={
+                              itemInfo?.attributes?.image?.data?.[index]
+                                ?.attributes?.formats?.medium?.url ??
+                              itemInfo?.attributes?.image?.data?.[index]
+                                ?.attributes?.formats?.small?.url ??
+                              itemInfo?.attributes?.image?.data?.[index]
+                                ?.attributes?.formats?.thumbnail?.url ??
+                              itemInfo?.attributes.image?.[index].formats
+                                ?.medium?.url ??
+                              itemInfo?.attributes.image?.[index].formats
+                                ?.thumbnail?.url
+                            }
+                            width={300}
+                            height={100}
+                            alt="Product"
+                            className="object-cover h-full w-full rounded-md bg-gray-100 mb-4 flex items-center justify-center"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             </div>
             <div className="md:flex-1 px-4 my-auto">
