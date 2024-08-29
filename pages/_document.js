@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="shortcut icon" href="/new-logo.svg" type="image/x-icon" />
         <meta
           name="description"
-          content="Discover a world of vintage wonders at Drip Vault, the premier online thrift store. Unearth hidden gems and elevate your style with our curated collection of secondhand treasures. From classic apparel to unique accessories, explore our virtual vault and embark on a sustainable fashion journey. Shop with purpose and embrace the thrill of finding timeless fashion pieces that reflect your individuality. Start your treasure hunt today at Drip Vault and unlock the magic of vintage fashion."
+          content="Unlock the flavors of the world at Zenith, your ultimate online food haven. Explore our carefully curated selection of gourmet goodies, from classic treats to international delicacies. Embark on a journey of culinary discovery and find your new favorite flavors. With Zenith, every meal is a treasure, and every bite is a delight. Start shopping today and taste the difference!"
         />
       </Head>
       <body>
