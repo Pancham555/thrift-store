@@ -30,10 +30,7 @@ export default function Home() {
   return (
     <main className="bg-gray-800">
       <Head>
-        <title>
-          Drip Vault: Unveiling the Ultimate Thrift Treasure Trove - Shop
-          Vintage Gems Online
-        </title>
+        <title>Zenith: Unveiling the Ultimate food shopping experience</title>
       </Head>
       <Sidebar open={open} setOpen={setOpen} />
       <Hero />

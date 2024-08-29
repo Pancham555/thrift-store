@@ -14,7 +14,7 @@ const Footer = () => {
               <Image
                 width={50}
                 height={50}
-                src="/logo.svg"
+                src="/new-logo.svg"
                 className="h-16 w-44 mr-3"
                 alt="Logo"
               />
@@ -34,7 +34,7 @@ const Footer = () => {
                     href="https://drip-vault.vercel.app/"
                     className="hover:underline"
                   >
-                    Drip Vault
+                    Zenith
                   </a>
                 </li>
                 <li>
@@ -92,12 +92,12 @@ const Footer = () => {
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center text-gray-400">
-            © 2023{" "}
+            © 2024{" "}
             <a
               href="https://drip-vault.vercel.app/"
               className="hover:underline"
             >
-              DripVault™
+              Zenith™
             </a>
             . All Rights Reserved.
           </span>

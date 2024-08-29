@@ -47,7 +47,7 @@ const Navbar = () => {
             >
               {/* DripVault.store */}
               <Image
-                src="/logo.svg"
+                src="/new-logo.svg"
                 width={800}
                 height={300}
                 alt="Logo"
