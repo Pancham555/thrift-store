@@ -66,9 +66,9 @@ export default function AboutUs() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Welcome to Zenith</h2>
               <p className="text-lg mb-4">
-                We're passionate about delivering the finest gourmet ingredients
-                right to your doorstep. Our curated selection of artisanal foods
-                will elevate your cooking and dining experience.
+                We&lsquo;re passionate about delivering the finest gourmet
+                ingredients right to your doorstep. Our curated selection of
+                artisanal foods will elevate your cooking and dining experience.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
@@ -115,7 +115,8 @@ export default function AboutUs() {
                 </h3>
                 <p className="text-muted-foreground text-center">
                   A digital marketing specialist who enhances transparency and
-                  boosts the 'Ease of Living' while employability in India
+                  boosts the &lsquo;Ease of Living&lsquo; while employability in
+                  India
                 </p>
               </div>
             </div>
@@ -129,9 +130,9 @@ export default function AboutUs() {
                 Our Mission
               </h2>
               <p className="text-lg text-center">
-                At Zenith, we're on a mission to make gourmet cooking accessible
-                to everyone. We believe that with the right ingredients, anyone
-                can create extraordinary meals at home.
+                At Zenith, we&lsquo;re on a mission to make gourmet cooking
+                accessible to everyone. We believe that with the right
+                ingredients, anyone can create extraordinary meals at home.
               </p>
             </div>
           </div>
